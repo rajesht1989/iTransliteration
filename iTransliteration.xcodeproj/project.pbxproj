@@ -304,7 +304,7 @@
 				INFOPLIST_FILE = iTransliteration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "402537d8-1900-4e77-9929-c9245f3f872e";
+				PROVISIONING_PROFILE = "84922906-c47d-435d-b883-3cc642715811";
 			};
 			name = Debug;
 		};
@@ -315,7 +315,7 @@
 				INFOPLIST_FILE = iTransliteration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "402537d8-1900-4e77-9929-c9245f3f872e";
+				PROVISIONING_PROFILE = "84922906-c47d-435d-b883-3cc642715811";
 			};
 			name = Release;
 		};
