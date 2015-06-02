@@ -13,6 +13,9 @@
 		924E462C1B1C7288000BF505 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924E462A1B1C7288000BF505 /* Main.storyboard */; };
 		924E462E1B1C7288000BF505 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924E462D1B1C7288000BF505 /* Images.xcassets */; };
 		924E46311B1C7288000BF505 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 924E462F1B1C7288000BF505 /* LaunchScreen.xib */; };
+		924E467A1B1D5D34000BF505 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 924E46791B1D5D34000BF505 /* Connection.m */; };
+		924E467D1B1D68E7000BF505 /* Transliteration.m in Sources */ = {isa = PBXBuildFile; fileRef = 924E467C1B1D68E7000BF505 /* Transliteration.m */; };
+		924E46831B1D7AC4000BF505 /* FPTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 924E46821B1D7AC4000BF505 /* FPTextView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,12 @@
 		924E46301B1C7288000BF505 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		924E463B1B1C7288000BF505 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		924E463C1B1C7288000BF505 /* iTransliterationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iTransliterationTests.m; sourceTree = "<group>"; };
+		924E46781B1D5D34000BF505 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connection.h; sourceTree = "<group>"; };
+		924E46791B1D5D34000BF505 /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connection.m; sourceTree = "<group>"; };
+		924E467B1B1D68E7000BF505 /* Transliteration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Transliteration.h; sourceTree = "<group>"; };
+		924E467C1B1D68E7000BF505 /* Transliteration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Transliteration.m; sourceTree = "<group>"; };
+		924E46811B1D7AC4000BF505 /* FPTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FPTextView.h; sourceTree = "<group>"; };
+		924E46821B1D7AC4000BF505 /* FPTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FPTextView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +74,12 @@
 				924E46251B1C7288000BF505 /* AppDelegate.m */,
 				924E46271B1C7288000BF505 /* ViewController.h */,
 				924E46281B1C7288000BF505 /* ViewController.m */,
+				924E46781B1D5D34000BF505 /* Connection.h */,
+				924E46791B1D5D34000BF505 /* Connection.m */,
+				924E467B1B1D68E7000BF505 /* Transliteration.h */,
+				924E467C1B1D68E7000BF505 /* Transliteration.m */,
+				924E46811B1D7AC4000BF505 /* FPTextView.h */,
+				924E46821B1D7AC4000BF505 /* FPTextView.m */,
 				924E462A1B1C7288000BF505 /* Main.storyboard */,
 				924E462D1B1C7288000BF505 /* Images.xcassets */,
 				924E462F1B1C7288000BF505 /* LaunchScreen.xib */,
@@ -172,6 +187,9 @@
 				924E46291B1C7288000BF505 /* ViewController.m in Sources */,
 				924E46261B1C7288000BF505 /* AppDelegate.m in Sources */,
 				924E46231B1C7288000BF505 /* main.m in Sources */,
+				924E46831B1D7AC4000BF505 /* FPTextView.m in Sources */,
+				924E467A1B1D5D34000BF505 /* Connection.m in Sources */,
+				924E467D1B1D68E7000BF505 /* Transliteration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +304,7 @@
 				INFOPLIST_FILE = iTransliteration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "402537d8-1900-4e77-9929-c9245f3f872e";
 			};
 			name = Debug;
 		};
@@ -296,6 +315,7 @@
 				INFOPLIST_FILE = iTransliteration/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "402537d8-1900-4e77-9929-c9245f3f872e";
 			};
 			name = Release;
 		};

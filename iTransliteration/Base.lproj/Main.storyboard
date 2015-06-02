@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,8 +16,52 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose a language to &quot;Transliterate&quot;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cb9-0M-AhN">
+                                <rect key="frame" x="16" y="51" width="568" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="qZ1-uC-M3d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BBr-mt-F4W">
+                                <rect key="frame" x="16" y="85" width="568" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="faI-WB-0ZV"/>
+                                </connections>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cx0-tk-9gy" customClass="FPTextView">
+                                <rect key="frame" x="16" y="133" width="568" height="173"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Tci-xP-2VH"/>
+                                </connections>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cb9-0M-AhN" firstAttribute="leading" secondItem="BBr-mt-F4W" secondAttribute="leading" id="5Q8-wf-3Ft"/>
+                            <constraint firstItem="BBr-mt-F4W" firstAttribute="trailing" secondItem="cx0-tk-9gy" secondAttribute="trailing" id="5T8-CU-5mX"/>
+                            <constraint firstItem="BBr-mt-F4W" firstAttribute="top" secondItem="Cb9-0M-AhN" secondAttribute="bottom" constant="13" id="Gdy-3h-Pij"/>
+                            <constraint firstItem="BBr-mt-F4W" firstAttribute="trailing" secondItem="Cb9-0M-AhN" secondAttribute="trailing" id="Jh4-Hn-6hX"/>
+                            <constraint firstItem="cx0-tk-9gy" firstAttribute="top" secondItem="BBr-mt-F4W" secondAttribute="bottom" constant="18" id="YpU-lU-xA5"/>
+                            <constraint firstItem="BBr-mt-F4W" firstAttribute="leading" secondItem="cx0-tk-9gy" secondAttribute="leading" id="avq-JP-d5L"/>
+                            <constraint firstItem="cx0-tk-9gy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="fcm-vi-6VT"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cx0-tk-9gy" secondAttribute="bottom" constant="294" id="gT5-Ht-UJN"/>
+                            <constraint firstItem="Cb9-0M-AhN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="jjZ-eT-9iq"/>
+                            <constraint firstItem="Cb9-0M-AhN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="31" id="uTj-js-T5o"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtChooseLanguage" destination="BBr-mt-F4W" id="p4o-9M-AbT"/>
+                        <outlet property="txtTranslate" destination="cx0-tk-9gy" id="gMn-LN-Tpq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
