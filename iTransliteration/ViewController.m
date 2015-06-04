@@ -32,7 +32,7 @@
     iSelectedIndex = -1;
 //    dictData = [NSMutableDictionary new];
     [txtTranslate.lblPlaceHolder setText:@"Transliteration"];
-    [txtTranslate.lblFloating setText:@"Enter text for Transliteration"];
+    [txtTranslate.lblFloating setText:@"Enter text and leave a space to Transliterate"];
     strCurrent = @"";
     UIView *view = [[UIView alloc] initWithFrame:self.view.bounds];
     [view setBackgroundColor:[UIColor colorWithRed:.25 green:1 blue:.73 alpha:.23]];
