@@ -11,6 +11,7 @@
 
 - (void)awakeFromNib
 {
+    [super awakeFromNib];
     self.lblPlaceHolder = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, self.bounds.size.width, 20)];
     [self addSubview:self.lblPlaceHolder];
     [self.lblPlaceHolder setTextColor:[UIColor lightGrayColor]];

@@ -28,16 +28,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self.view setBackgroundColor:[UIColor whiteColor]];
+    [self.view setBackgroundColor:[[UIColor whiteColor] colorWithAlphaComponent:.9]];
     iSelectedIndex = -1;
-//    dictData = [NSMutableDictionary new];
+
     [txtTranslate.lblPlaceHolder setText:@"Transliteration"];
     [txtTranslate.lblFloating setText:@"Enter text and leave a space to Transliterate"];
     strCurrent = @"";
-    UIView *view = [[UIView alloc] initWithFrame:self.view.bounds];
-    [view setBackgroundColor:[UIColor colorWithRed:.25 green:1 blue:.73 alpha:.23]];
-    [self.view addSubview:view];
-    [self.view sendSubviewToBack:view];
+
     arrLanguages = [NSArray arrayWithObjects:@"Bengali", @"Greek",@"Gujarati",@"Hindi",@"Kannada",@"Malayalam",@"Marathi",@"Nepali",@"Oriya",@"Punjabi",@"Russian",@"Sanskrit",@"Serbian",@"Sinhalese",@"Tamil", @"Telugu",@"Tigrinya", nil];
     arrLanguageCodes = [NSArray arrayWithObjects:@"bn", @"el",@"gu",@"hi",@"kn",@"ml",@"mr",@"ne",@"or",@"pa",@"ru",@"sa",@"sr",@"si",@"ta", @"te",@"ti", nil];
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
@@ -47,13 +44,15 @@
     [txtChooseLanguage setBackgroundColor:[UIColor clearColor]];
     [txtChooseLanguage.layer setCornerRadius:5];
     [txtChooseLanguage setTintColor:[UIColor clearColor]];
-
-    UILabel *lblDown = [[UILabel alloc] initWithFrame:CGRectMake(txtChooseLanguage.bounds.size.width - 30, 0, 30, 30)];
+    [txtChooseLanguage setText:@"Tamil"];
+    iSelectedIndex = [arrLanguageCodes indexOfObject:@"ta"];
+    
+    UILabel *lblDown = [[UILabel alloc] initWithFrame:CGRectMake(txtChooseLanguage.bounds.size.width - 30, 0, 30, 35)];
     [lblDown setBackgroundColor:[UIColor grayColor]];
     [lblDown setAutoresizingMask:UIViewAutoresizingFlexibleLeftMargin];
     [lblDown setTextAlignment:NSTextAlignmentCenter];
-    [lblDown setText:@"v"];
-    [lblDown setFont:[UIFont boldSystemFontOfSize:10]];
+    [lblDown setText:@"▽"];
+    [lblDown setFont:[UIFont boldSystemFontOfSize:15]];
     [lblDown setTextColor:[UIColor whiteColor]];
     [txtChooseLanguage addSubview:lblDown];
     
@@ -62,14 +61,14 @@
     
     UISegmentedControl *cancelButton = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObject:NSLocalizedString(@"Cancel",nil)]];
     cancelButton.momentary = YES;
-    cancelButton.frame =CGRectMake(10,10,60,25);
+    cancelButton.frame =CGRectMake(10,10,60,32);
     cancelButton.tintColor = [UIColor blackColor];
     [cancelButton addTarget:self action:@selector(cancelTapped) forControlEvents:UIControlEventValueChanged];
     [vwInput addSubview:cancelButton];
     
     UISegmentedControl *doneButton = [[UISegmentedControl alloc] initWithItems:[NSArray arrayWithObject:NSLocalizedString(@"Done",nil)]];
     doneButton.momentary = YES;
-    doneButton.frame =CGRectMake(vwInput.bounds.size.width-70,10,60,25);
+    doneButton.frame =CGRectMake(vwInput.bounds.size.width-70,10,60,32);
     doneButton.tintColor = [UIColor blackColor];
     [doneButton addTarget:self action:@selector(doneTapped) forControlEvents:UIControlEventValueChanged];
     [vwInput addSubview:doneButton];
@@ -112,10 +111,6 @@
     }
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-}
-
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 1;
@@ -127,10 +122,10 @@
 
 - (UIView *)pickerView:(UIPickerView *)pickerView viewForRow:(NSInteger)row forComponent:(NSInteger)component reusingView:(UIView *)view
 {
-    UILabel *lblDown = [[UILabel alloc] initWithFrame:CGRectMake(txtChooseLanguage.bounds.size.width - 30, 0, self.view.bounds.size.width, 30)];
+    UILabel *lblDown = [[UILabel alloc] initWithFrame:CGRectMake(txtChooseLanguage.bounds.size.width - 30, 0, self.view.bounds.size.width, 38)];
     [lblDown setTextAlignment:NSTextAlignmentCenter];
     [lblDown setText:arrLanguages[row]];
-    [lblDown setFont:[UIFont systemFontOfSize:13.]];
+    [lblDown setFont:[UIFont systemFontOfSize:18.]];
     [lblDown setTextColor:[UIColor darkGrayColor]];
     return lblDown;
 }
